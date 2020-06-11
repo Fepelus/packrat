@@ -1,0 +1,19 @@
+{
+  "name": "packrat",
+  "version": "1.0.0",
+  "title": "Packrat paper",
+  "description": "Trying out the code examples in Ford’s paper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fepelus/packrat.git"
+  },
+  "author": "Patrick Borgeest",
+  "license": "0BSD",
+  "type": "module",
+  "scripts": {
+    "lint": "node lib/lint.js lib src test | lib/tap.js",
+    "pretest": "npm run lint",
+    "test": "node lib/globReq.mjs test/*test.js | lib/tap.js",
+    "watch": "ls package.json lib/*js src/*js test/*js | entr npm test"
+  }
+}
